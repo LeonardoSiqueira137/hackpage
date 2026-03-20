@@ -1,0 +1,122 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@700&display=swap');
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#0a0a0a;color:#00ff41;font-family:'Share Tech Mono',monospace;overflow-x:hidden}
+  .scanline{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,255,65,0.015) 2px,rgba(0,255,65,0.015) 4px);z-index:999}
+  .hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:2rem;position:relative;border-bottom:1px solid #00ff4133}
+  .glitch{font-family:'Orbitron',sans-serif;font-size:clamp(1.6rem,5vw,3rem);color:#00ff41;text-shadow:0 0 10px #00ff41;letter-spacing:2px;line-height:1.3}
+  .sub{font-size:clamp(0.85rem,2vw,1.1rem);color:#888;margin:1.5rem 0;max-width:600px;line-height:1.8}
+  .tag{background:#00ff4118;border:1px solid #00ff4144;color:#00ff41;font-size:0.75rem;padding:4px 12px;border-radius:4px;display:inline-block;margin-bottom:1rem;letter-spacing:3px}
+  .btn-main{background:transparent;border:1.5px solid #00ff41;color:#00ff41;font-family:'Share Tech Mono',monospace;font-size:1rem;padding:14px 36px;cursor:pointer;letter-spacing:2px;margin-top:1.5rem;transition:all .2s;position:relative;overflow:hidden}
+  .btn-main:hover{background:#00ff4122;box-shadow:0 0 20px #00ff4155;transform:scale(1.02)}
+  .countdown{display:flex;gap:1rem;margin:2rem 0;justify-content:center}
+  .cd-box{background:#111;border:1px solid #00ff4133;padding:12px 20px;text-align:center;min-width:70px}
+  .cd-num{font-size:1.8rem;color:#00ff41;font-family:'Orbitron',sans-serif}
+  .cd-label{font-size:0.65rem;color:#555;letter-spacing:2px;margin-top:4px}
+  .section{padding:4rem 2rem;max-width:800px;margin:0 auto}
+  .sec-title{font-family:'Orbitron',sans-serif;font-size:1.2rem;color:#00ff41;border-bottom:1px solid #00ff4133;padding-bottom:0.75rem;margin-bottom:2rem;letter-spacing:2px}
+  .item{display:flex;gap:1rem;margin-bottom:1.2rem;align-items:flex-start;border-left:2px solid #00ff4144;padding-left:1rem}
+  .item-icon{color:#00ff41;font-size:1rem;flex-shrink:0;margin-top:2px}
+  .item-text{color:#aaa;font-size:0.9rem;line-height:1.7}
+  .item-title{color:#00ff41;font-size:0.9rem;margin-bottom:4px}
+  .testimonial{background:#0d0d0d;border:1px solid #00ff4122;padding:1.2rem;margin-bottom:1rem;border-radius:4px}
+  .test-text{color:#888;font-size:0.85rem;line-height:1.7;margin-bottom:0.5rem}
+  .test-name{color:#00ff4188;font-size:0.75rem}
+  .price-box{background:#0d0d0d;border:1px solid #00ff4155;padding:2.5rem;text-align:center;border-radius:4px}
+  .price-old{color:#555;text-decoration:line-through;font-size:0.9rem;margin-bottom:0.5rem}
+  .price-new{font-family:'Orbitron',sans-serif;font-size:2.5rem;color:#00ff41;text-shadow:0 0 15px #00ff4166}
+  .price-sub{color:#555;font-size:0.8rem;margin:0.5rem 0 1.5rem}
+  .badge{background:#00ff4111;border:1px solid #00ff4133;color:#00ff4199;font-size:0.7rem;padding:3px 10px;border-radius:3px;letter-spacing:2px;display:inline-block;margin-bottom:1.5rem}
+  .warning{background:#1a0000;border:1px solid #ff000033;color:#ff4444;font-size:0.8rem;padding:1rem;text-align:center;letter-spacing:1px;margin:2rem auto;max-width:700px}
+  .footer{text-align:center;padding:2rem;color:#333;font-size:0.75rem;border-top:1px solid #00ff4111}
+  .blink{animation:blink 1s step-end infinite}
+  @keyframes blink{50%{opacity:0}}
+  .bar{height:2px;background:linear-gradient(90deg,transparent,#00ff41,transparent);width:200px;margin:1rem auto;opacity:.4}
+</style>
+
+<div class="scanline"></div>
+
+<div class="hero">
+  <div class="tag">▶ ACESSO RESTRITO — NÍVEL: INICIANTE</div>
+  <div class="glitch">O GUIA PROIBIDO<br>QUE TODO HACKER<br>NÃO QUER QUE VOCÊ LEIA</div>
+  <div class="bar"></div>
+  <p class="sub">Aprenda os segredos que as grandes corporações escondem. O e-book que o governo tentou banir. Mais de <span style="color:#00ff41">12.847 cópias</span> vendidas no underground.</p>
+  <div class="countdown">
+    <div class="cd-box"><div class="cd-num" id="h">02</div><div class="cd-label">HORAS</div></div>
+    <div class="cd-box"><div class="cd-num" id="m">47</div><div class="cd-label">MIN</div></div>
+    <div class="cd-box"><div class="cd-num" id="s">00</div><div class="cd-label">SEG</div></div>
+  </div>
+  <div style="color:#ff4444;font-size:0.8rem;letter-spacing:2px">⚠ OFERTA EXPIRA EM BREVE — ÚLTIMAS 7 CÓPIAS</div>
+  <button class="btn-main" onclick="window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'})">QUERO ACESSO AGORA &#x25BA;</button>
+</div>
+
+<div style="border-bottom:1px solid #00ff4122;border-top:1px solid #00ff4122;padding:1.5rem 2rem;text-align:center;background:#050505">
+  <span style="color:#555;font-size:0.8rem;letter-spacing:2px">SEGURANÇA GARANTIDA &nbsp;&#x2022;&nbsp; DOWNLOAD IMEDIATO &nbsp;&#x2022;&nbsp; SUPORTE 24H &nbsp;&#x2022;&nbsp; ACESSO VITALÍCIO</span>
+</div>
+
+<div class="warning">
+  ⚠ AVISO: Este material é para fins educacionais. Use com responsabilidade. Não nos responsabilizamos pelo que você fizer com esse conhecimento.
+</div>
+
+<div class="section">
+  <div class="sec-title">// O QUE VOCÊ VAI APRENDER</div>
+  <div class="item"><div class="item-icon">▶</div><div class="item-text"><div class="item-title">Como pensar como um hacker</div>Entenda a mentalidade por trás dos maiores ataques digitais da história.</div></div>
+  <div class="item"><div class="item-icon">▶</div><div class="item-text"><div class="item-title">Senhas e como elas são quebradas</div>Descubra por que "senha123" já caiu em 14 bilhões de vazamentos.</div></div>
+  <div class="item"><div class="item-icon">▶</div><div class="item-text"><div class="item-title">Engenharia social — a arma mais poderosa</div>O método que hackers usam sem digitar uma linha de código.</div></div>
+  <div class="item"><div class="item-icon">▶</div><div class="item-text"><div class="item-title">Redes Wi-Fi e seus segredos</div>O que acontece quando você se conecta numa rede pública.</div></div>
+  <div class="item"><div class="item-icon">▶</div><div class="item-text"><div class="item-title">Como se proteger de tudo isso</div>Bônus: guia completo para você não ser a próxima vítima.</div></div>
+</div>
+
+<div style="background:#050505;border-top:1px solid #00ff4111;border-bottom:1px solid #00ff4111">
+<div class="section">
+  <div class="sec-title">// DEPOIMENTOS DO UNDERGROUND</div>
+  <div class="testimonial">
+    <div class="test-text">"Eu achei que hackear era coisa de filme. Depois desse e-book eu entendo exatamente como funciona. Minha mente explodiu na página 12."</div>
+    <div class="test-name">— An0nym0us_BR ★★★★★</div>
+  </div>
+  <div class="testimonial">
+    <div class="test-text">"Comprei sem acreditar muito. Li em uma noite. Nunca mais vou me conectar num Wi-Fi público do mesmo jeito."</div>
+    <div class="test-name">— CyberNerd_404 ★★★★★</div>
+  </div>
+  <div class="testimonial">
+    <div class="test-text">"Conteúdo que as universidades não ensinam. Linguagem simples, direto ao ponto. Valeu cada centavo."</div>
+    <div class="test-name">— h4ck3r_curioso ★★★★★</div>
+  </div>
+</div>
+</div>
+
+<div class="section">
+  <div class="sec-title">// ACESSO IMEDIATO</div>
+  <div class="price-box">
+    <div class="badge">OFERTA ESPECIAL</div>
+    <div class="price-old">De R$ 197,00</div>
+    <div class="price-new">R$ 37<span style="font-size:1.2rem">,00</span></div>
+    <div class="price-sub">pagamento único • acesso imediato • garantia de 7 dias</div>
+    <div style="background:#0a0a0a;border:1px solid #00ff4133;padding:1.5rem;margin-bottom:1.5rem;text-align:left">
+      <div style="color:#00ff41;font-size:0.85rem;margin-bottom:0.75rem;letter-spacing:2px">&#x25BA; ANTES DE COMPRAR... UMA CURIOSIDADE:</div>
+      <div style="color:#888;font-size:0.85rem;line-height:1.8">Existe um lugar onde hackers brasileiros compartilham técnicas, ferramentas e segredos que <span style="color:#00ff41">jamais seriam publicados</span> num e-book comum.<br><br>Acesso gratuito. Por enquanto.</div>
+    </div>
+    <a href="https://discord.gg/rxpRDak8" style="text-decoration:none">
+      <button class="btn-main" style="font-size:1rem;padding:16px 48px;border-color:#7289da;color:#7289da">&#x25BA; ENTRAR NO SERVIDOR SECRETO</button>
+    </a>
+    <div style="color:#555;font-size:0.75rem;margin-top:1.2rem;letter-spacing:1px">ACESSO GRATUITO &nbsp;&#x2022;&nbsp; COMUNIDADE EXCLUSIVA &nbsp;&#x2022;&nbsp; CONTEÚDO DIÁRIO</div>
+  </div>
+</div>
+
+<div class="footer">
+  © 2026 HackerGuide Digital &nbsp;|&nbsp; Todos os direitos reservados &nbsp;|&nbsp; Este produto é apenas para fins educacionais<br>
+  <span class="blink">_</span>
+</div>
+
+<script>
+  let t = 2*3600 + 47*60;
+  const h=document.getElementById('h'),m=document.getElementById('m'),s=document.getElementById('s');
+  setInterval(()=>{
+    if(t<=0){t=3599}
+    t--;
+    const hh=Math.floor(t/3600),mm=Math.floor((t%3600)/60),ss=t%60;
+    h.textContent=String(hh).padStart(2,'0');
+    m.textContent=String(mm).padStart(2,'0');
+    s.textContent=String(ss).padStart(2,'0');
+  },1000);
+</script>
